@@ -1,515 +1,462 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Strongest Native American Tribes</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+<title>Native American Tribe Rankings</title>
 
-  <style>
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      scroll-behavior:smooth;
-    }
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&display=swap" rel="stylesheet">
 
-    body{
-      font-family:'Montserrat', sans-serif;
-      background:#0f1115;
-      color:white;
-      overflow-x:hidden;
-    }
+<style>
 
-    header{
-      height:100vh;
-      background:
-        linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.75)),
-        url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1600&auto=format&fit=crop');
-      background-size:cover;
-      background-position:center;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      text-align:center;
-      padding:20px;
-    }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
 
-    .hero{
-      max-width:900px;
-    }
+body{
+    font-family:'Montserrat',sans-serif;
+    background:#0d1015;
+    color:white;
+    overflow-x:hidden;
+}
 
-    .hero h1{
-      font-size:4rem;
-      font-weight:900;
-      margin-bottom:20px;
-      text-transform:uppercase;
-      letter-spacing:3px;
-    }
+/* HERO */
 
-    .hero p{
-      font-size:1.2rem;
-      color:#d0d0d0;
-      line-height:1.7;
-    }
+header{
+    height:100vh;
+    background:
+    linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.8)),
+    url("https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1600&auto=format&fit=crop");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
 
-    .hero button{
-      margin-top:35px;
-      padding:16px 32px;
-      border:none;
-      border-radius:40px;
-      background:#d4a017;
-      color:black;
-      font-weight:700;
-      cursor:pointer;
-      transition:.3s;
-      font-size:1rem;
-    }
+.hero{
+    max-width:950px;
+}
 
-    .hero button:hover{
-      transform:scale(1.05);
-      background:#f2c94c;
-    }
+.hero h1{
+    font-size:4.5rem;
+    font-weight:900;
+    margin-bottom:25px;
+    text-transform:uppercase;
+}
 
-    section{
-      padding:80px 10%;
-    }
+.hero p{
+    color:#d0d0d0;
+    line-height:1.8;
+    font-size:1.2rem;
+}
 
-    .section-title{
-      font-size:2.8rem;
-      margin-bottom:20px;
-      font-weight:800;
-      text-align:center;
-    }
+.hero button{
+    margin-top:35px;
+    padding:16px 36px;
+    border:none;
+    border-radius:50px;
+    background:#d4a017;
+    color:black;
+    font-weight:800;
+    cursor:pointer;
+    transition:.3s;
+}
 
-    .section-sub{
-      text-align:center;
-      color:#bdbdbd;
-      max-width:800px;
-      margin:0 auto 60px auto;
-      line-height:1.8;
-    }
+.hero button:hover{
+    transform:scale(1.05);
+}
 
-    .tribe-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-      gap:30px;
-    }
+/* GENERAL */
 
-    .tribe-card{
-      background:#171b22;
-      border-radius:24px;
-      overflow:hidden;
-      transition:.35s;
-      box-shadow:0 10px 30px rgba(0,0,0,.35);
-    }
+section{
+    padding:90px 8%;
+}
 
-    .tribe-card:hover{
-      transform:translateY(-10px);
-    }
+.section-title{
+    text-align:center;
+    font-size:3rem;
+    margin-bottom:20px;
+    font-weight:900;
+}
 
-    .tribe-card img{
-      width:100%;
-      height:240px;
-      object-fit:cover;
-    }
+.section-sub{
+    text-align:center;
+    color:#bcbcbc;
+    line-height:1.8;
+    max-width:850px;
+    margin:0 auto 60px auto;
+}
 
-    .tribe-content{
-      padding:25px;
-    }
+/* INTERACTIVE MAP */
 
-    .rank{
-      color:#d4a017;
-      font-size:1rem;
-      font-weight:700;
-      margin-bottom:10px;
-    }
+.map-container{
+    display:flex;
+    gap:40px;
+    flex-wrap:wrap;
+    align-items:center;
+    justify-content:center;
+}
 
-    .tribe-content h2{
-      margin-bottom:15px;
-      font-size:2rem;
-    }
+.map{
+    position:relative;
+    width:700px;
+    max-width:100%;
+}
 
-    .stats{
-      margin:20px 0;
-    }
+.map img{
+    width:100%;
+    border-radius:25px;
+}
 
-    .stat{
-      margin-bottom:12px;
-    }
+.region{
+    position:absolute;
+    width:24px;
+    height:24px;
+    border-radius:50%;
+    background:#ffd54a;
+    border:3px solid white;
+    cursor:pointer;
+    transition:.3s;
+}
 
-    .stat span{
-      display:flex;
-      justify-content:space-between;
-      margin-bottom:5px;
-      font-size:.9rem;
-    }
+.region:hover{
+    transform:scale(1.2);
+}
 
-    .bar{
-      height:10px;
-      background:#2d323d;
-      border-radius:20px;
-      overflow:hidden;
-    }
+.info-box{
+    background:#171b22;
+    padding:30px;
+    border-radius:25px;
+    width:400px;
+    min-height:320px;
+    box-shadow:0 10px 25px rgba(0,0,0,.4);
+}
 
-    .fill{
-      height:100%;
-      background:linear-gradient(90deg,#d4a017,#f2c94c);
-    }
+.info-box h2{
+    margin-bottom:18px;
+    color:#ffd54a;
+}
 
-    .tribe-content p{
-      color:#d0d0d0;
-      line-height:1.7;
-      margin-top:20px;
-    }
+.info-box p{
+    line-height:1.8;
+    color:#d3d3d3;
+}
 
-    .comparison{
-      background:#13161d;
-    }
+/* RANKINGS */
 
-    table{
-      width:100%;
-      border-collapse:collapse;
-      margin-top:40px;
-      overflow:hidden;
-      border-radius:20px;
-    }
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:35px;
+}
 
-    th, td{
-      padding:18px;
-      text-align:left;
-    }
+.card{
+    background:#161b23;
+    border-radius:25px;
+    overflow:hidden;
+    transition:.35s;
+}
 
-    th{
-      background:#d4a017;
-      color:black;
-    }
+.card:hover{
+    transform:translateY(-10px);
+}
 
-    tr:nth-child(even){
-      background:#1c212b;
-    }
+.card img{
+    width:100%;
+    height:240px;
+    object-fit:cover;
+}
 
-    tr:nth-child(odd){
-      background:#161a22;
-    }
+.content{
+    padding:25px;
+}
 
-    footer{
-      padding:40px;
-      text-align:center;
-      background:#0a0c10;
-      color:#8d8d8d;
-      line-height:1.8;
-    }
+.rank{
+    color:#ffd54a;
+    font-weight:800;
+    margin-bottom:10px;
+}
 
-    @media(max-width:768px){
+.content h2{
+    margin-bottom:18px;
+    font-size:2rem;
+}
 
-      .hero h1{
-        font-size:2.7rem;
-      }
+.content p{
+    color:#d2d2d2;
+    line-height:1.8;
+}
 
-      .section-title{
-        font-size:2rem;
-      }
+/* TABLE */
 
-    }
-  </style>
+.table-section{
+    background:#13171f;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:40px;
+}
+
+th{
+    background:#d4a017;
+    color:black;
+    padding:18px;
+    text-align:left;
+}
+
+td{
+    padding:18px;
+}
+
+tr:nth-child(even){
+    background:#1b2029;
+}
+
+tr:nth-child(odd){
+    background:#151922;
+}
+
+/* IROQUOIS */
+
+.iroquois{
+    background:
+    linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.8)),
+    url("https://images.unsplash.com/photo-1511497584788-876760111969?q=80&w=1600&auto=format&fit=crop");
+    background-size:cover;
+    background-position:center;
+}
+
+.iroquois-box{
+    max-width:1000px;
+    margin:auto;
+    background:rgba(18,22,29,.88);
+    padding:45px;
+    border-radius:30px;
+    line-height:2;
+    font-size:1.05rem;
+}
+
+/* LACROSSE */
+
+.lacrosse{
+    background:#10151c;
+}
+
+.lax-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.lax-card{
+    background:#171d26;
+    padding:30px;
+    border-radius:20px;
+    text-align:center;
+}
+
+.lax-rank{
+    font-size:3rem;
+    color:#ffd54a;
+    font-weight:900;
+}
+
+.lax-card h2{
+    margin:15px 0;
+}
+
+/* FOOTER */
+
+footer{
+    background:#090c11;
+    padding:40px;
+    text-align:center;
+    color:#8d8d8d;
+    line-height:1.8;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:2.7rem;
+}
+
+.section-title{
+    font-size:2rem;
+}
+
+}
+
+</style>
 </head>
 
 <body>
 
 <header>
-  <div class="hero">
-    <h1>Strongest Native American Tribes</h1>
 
-    <p>
-      Ranking major Native American tribes in the continental United States
-      based on military strength, economic prosperity, territorial influence,
-      political organization, resistance to colonization, and cultural legacy.
-    </p>
+<div class="hero">
 
-    <button onclick="document.getElementById('rankings').scrollIntoView();">
-      View Rankings
-    </button>
-  </div>
+<h1>Native American Tribe Rankings</h1>
+
+<p>
+Explore the strongest Native American tribes in the continental United States
+through military strength, economic prosperity, territorial influence,
+and cultural impact.
+</p>
+
+<button onclick="document.getElementById('map-section').scrollIntoView();">
+Explore Tribes
+</button>
+
+</div>
+
 </header>
 
-<section id="rankings">
-  <h1 class="section-title">Top Tribal Rankings</h1>
+<!-- MAP SECTION -->
 
-  <p class="section-sub">
-    These rankings combine military power, trade wealth, influence,
-    population size, strategic alliances, and historical impact.
-  </p>
+<section id="map-section">
 
-  <div class="tribe-grid">
+<h1 class="section-title">Interactive Tribal Map</h1>
 
-    <!-- Iroquois -->
-    <div class="tribe-card">
-      <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=1200&auto=format&fit=crop">
+<p class="section-sub">
+Tap the glowing regions on the map to learn about each tribe,
+where they lived, and what made them powerful.
+</p>
 
-      <div class="tribe-content">
-        <div class="rank">#1 Overall</div>
-        <h2>Iroquois Confederacy</h2>
+<div class="map-container">
 
-        <div class="stats">
-          <div class="stat">
-            <span><strong>Military</strong><strong>98</strong></span>
-            <div class="bar"><div class="fill" style="width:98%"></div></div>
-          </div>
+<div class="map">
 
-          <div class="stat">
-            <span><strong>Economy</strong><strong>95</strong></span>
-            <div class="bar"><div class="fill" style="width:95%"></div></div>
-          </div>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Blank_US_Map_%28states_only%29.svg/1280px-Blank_US_Map_%28states_only%29.svg.png">
 
-          <div class="stat">
-            <span><strong>Political Power</strong><strong>100</strong></span>
-            <div class="bar"><div class="fill" style="width:100%"></div></div>
-          </div>
-        </div>
+<!-- IROQUOIS -->
+<div class="region" style="top:27%; left:77%;" onclick="showInfo('iroquois')"></div>
 
-        <p>
-          The Iroquois Confederacy was one of the most advanced political
-          alliances in North America. Their confederation united multiple
-          nations into a powerful military and diplomatic force that influenced
-          European colonial politics for centuries.
-        </p>
-      </div>
-    </div>
+<!-- SIOUX -->
+<div class="region" style="top:33%; left:55%;" onclick="showInfo('sioux')"></div>
 
-    <!-- Sioux -->
-    <div class="tribe-card">
-      <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1200&auto=format&fit=crop">
+<!-- NAVAJO -->
+<div class="region" style="top:58%; left:33%;" onclick="showInfo('navajo')"></div>
 
-      <div class="tribe-content">
-        <div class="rank">#2</div>
-        <h2>Sioux</h2>
+<!-- APACHE -->
+<div class="region" style="top:67%; left:35%;" onclick="showInfo('apache')"></div>
 
-        <div class="stats">
-          <div class="stat">
-            <span><strong>Military</strong><strong>97</strong></span>
-            <div class="bar"><div class="fill" style="width:97%"></div></div>
-          </div>
+<!-- COMANCHE -->
+<div class="region" style="top:62%; left:47%;" onclick="showInfo('comanche')"></div>
 
-          <div class="stat">
-            <span><strong>Economy</strong><strong>80</strong></span>
-            <div class="bar"><div class="fill" style="width:80%"></div></div>
-          </div>
+<!-- CHEROKEE -->
+<div class="region" style="top:58%; left:67%;" onclick="showInfo('cherokee')"></div>
 
-          <div class="stat">
-            <span><strong>Territorial Control</strong><strong>95</strong></span>
-            <div class="bar"><div class="fill" style="width:95%"></div></div>
-          </div>
-        </div>
+<!-- SEMINOLE -->
+<div class="region" style="top:80%; left:78%;" onclick="showInfo('seminole')"></div>
 
-        <p>
-          The Sioux became legendary horse warriors of the Great Plains and
-          defeated U.S. forces in famous battles such as Little Bighorn.
-          Their mobility and warrior culture made them one of the most feared
-          military powers in the West.
-        </p>
-      </div>
-    </div>
+<!-- CHIPPEWA -->
+<div class="region" style="top:22%; left:60%;" onclick="showInfo('chippewa')"></div>
 
-    <!-- Navajo -->
-    <div class="tribe-card">
-      <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?q=80&w=1200&auto=format&fit=crop">
+<!-- CHOCTAW -->
+<div class="region" style="top:67%; left:63%;" onclick="showInfo('choctaw')"></div>
 
-      <div class="tribe-content">
-        <div class="rank">#3</div>
-        <h2>Navajo</h2>
+</div>
 
-        <div class="stats">
-          <div class="stat">
-            <span><strong>Military</strong><strong>88</strong></span>
-            <div class="bar"><div class="fill" style="width:88%"></div></div>
-          </div>
+<div class="info-box" id="infoBox">
 
-          <div class="stat">
-            <span><strong>Economy</strong><strong>94</strong></span>
-            <div class="bar"><div class="fill" style="width:94%"></div></div>
-          </div>
+<h2>Click A Tribe Region</h2>
 
-          <div class="stat">
-            <span><strong>Cultural Influence</strong><strong>96</strong></span>
-            <div class="bar"><div class="fill" style="width:96%"></div></div>
-          </div>
-        </div>
+<p>
+Select a glowing location on the map to learn about the tribe,
+their homeland, military power, economy, and influence.
+</p>
 
-        <p>
-          The Navajo built one of the largest and most prosperous Native
-          communities in the Southwest, known for trade, livestock, weaving,
-          and their enduring modern influence.
-        </p>
-      </div>
-    </div>
+</div>
 
-    <!-- Apache -->
-    <div class="tribe-card">
-      <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=1200&auto=format&fit=crop">
+</div>
 
-      <div class="tribe-content">
-        <div class="rank">#4</div>
-        <h2>Apache</h2>
-
-        <div class="stats">
-          <div class="stat">
-            <span><strong>Military</strong><strong>95</strong></span>
-            <div class="bar"><div class="fill" style="width:95%"></div></div>
-          </div>
-
-          <div class="stat">
-            <span><strong>Guerrilla Warfare</strong><strong>100</strong></span>
-            <div class="bar"><div class="fill" style="width:100%"></div></div>
-          </div>
-
-          <div class="stat">
-            <span><strong>Economy</strong><strong>70</strong></span>
-            <div class="bar"><div class="fill" style="width:70%"></div></div>
-          </div>
-        </div>
-
-        <p>
-          The Apache mastered desert warfare and resistance tactics,
-          making them extremely difficult for Spanish, Mexican,
-          and American armies to defeat.
-        </p>
-      </div>
-    </div>
-
-    <!-- Comanche -->
-    <div class="tribe-card">
-      <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1200&auto=format&fit=crop">
-
-      <div class="tribe-content">
-        <div class="rank">#5</div>
-        <h2>Comanche</h2>
-
-        <div class="stats">
-          <div class="stat">
-            <span><strong>Military</strong><strong>96</strong></span>
-            <div class="bar"><div class="fill" style="width:96%"></div></div>
-          </div>
-
-          <div class="stat">
-            <span><strong>Horse Power</strong><strong>100</strong></span>
-            <div class="bar"><div class="fill" style="width:100%"></div></div>
-          </div>
-
-          <div class="stat">
-            <span><strong>Economy</strong><strong>78</strong></span>
-            <div class="bar"><div class="fill" style="width:78%"></div></div>
-          </div>
-        </div>
-
-        <p>
-          The Comanche dominated the Southern Plains through elite horseback
-          warfare and controlled major trade and raiding networks.
-        </p>
-      </div>
-    </div>
-
-  </div>
 </section>
 
-<section class="comparison">
-  <h1 class="section-title">Full Tribe Comparison</h1>
+<!-- RANKINGS -->
 
-  <table>
-    <tr>
-      <th>Rank</th>
-      <th>Tribe</th>
-      <th>Military</th>
-      <th>Economy</th>
-      <th>Influence</th>
-    </tr>
+<section>
 
-    <tr>
-      <td>1</td>
-      <td>Iroquois</td>
-      <td>98</td>
-      <td>95</td>
-      <td>100</td>
-    </tr>
+<h1 class="section-title">Historical Rankings</h1>
 
-    <tr>
-      <td>2</td>
-      <td>Sioux</td>
-      <td>97</td>
-      <td>80</td>
-      <td>95</td>
-    </tr>
+<p class="section-sub">
+These rankings combine military skill, trade systems,
+economic prosperity, alliances, population, and historical influence.
+</p>
 
-    <tr>
-      <td>3</td>
-      <td>Navajo</td>
-      <td>88</td>
-      <td>94</td>
-      <td>96</td>
-    </tr>
+<div class="grid">
 
-    <tr>
-      <td>4</td>
-      <td>Apache</td>
-      <td>95</td>
-      <td>70</td>
-      <td>89</td>
-    </tr>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1511497584788-876760111969?q=80&w=1200&auto=format&fit=crop">
+<div class="content">
+<div class="rank">#1 Overall</div>
+<h2>Iroquois Confederacy</h2>
+<p>
+The Iroquois Confederacy formed one of the strongest alliances in North America,
+combining military coordination, trade, diplomacy, and political unity.
+</p>
+</div>
+</div>
 
-    <tr>
-      <td>5</td>
-      <td>Comanche</td>
-      <td>96</td>
-      <td>78</td>
-      <td>91</td>
-    </tr>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1200&auto=format&fit=crop">
+<div class="content">
+<div class="rank">#2</div>
+<h2>Sioux</h2>
+<p>
+The Sioux dominated the Great Plains with elite horseback warriors,
+large territory, and powerful resistance against U.S. forces.
+</p>
+</div>
+</div>
 
-    <tr>
-      <td>6</td>
-      <td>Cherokee</td>
-      <td>82</td>
-      <td>90</td>
-      <td>93</td>
-    </tr>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1472396961693-142e6e269027?q=80&w=1200&auto=format&fit=crop">
+<div class="content">
+<div class="rank">#3</div>
+<h2>Navajo</h2>
+<p>
+The Navajo became one of the most economically prosperous Native groups
+through livestock, trade, and weaving industries.
+</p>
+</div>
+</div>
 
-    <tr>
-      <td>7</td>
-      <td>Seminole</td>
-      <td>85</td>
-      <td>72</td>
-      <td>84</td>
-    </tr>
+</div>
 
-    <tr>
-      <td>8</td>
-      <td>Chippewa</td>
-      <td>80</td>
-      <td>75</td>
-      <td>82</td>
-    </tr>
-
-    <tr>
-      <td>9</td>
-      <td>Choctaw</td>
-      <td>76</td>
-      <td>83</td>
-      <td>79</td>
-    </tr>
-
-  </table>
 </section>
 
-<footer>
-  <p>
-    Historical Ranking Project • Native American Tribes of the Continental U.S.
-  </p>
+<!-- TABLE -->
 
-  <p>
-    Designed for educational purposes and historical comparison.
-  </p>
-</footer>
+<section class="table-section">
 
-</body>
-</html>
+<h1 class="section-title">Complete Rankings</h1>
+
+<table>
+
+<tr>
+<th>Rank</th>
+<th>Tribe</th>
+<th>Military</th>
+<th>Economy</th>
+<th>Influence</th>
+</tr>
+
+<tr><td>1</td><td>Iroquois</td><td>98</td><td>95</td><td>100</td></tr>
+<tr><td>2</td><td>Sioux</td><td>97</td><td>80</td><td>95</td></tr>
+<tr><td>3</td><td>Navajo</td><td>88</td><td>96</td><td>97</td></tr>
+<tr><td>4</td><td>Apache</td><td>95</td><td>70</td><td>89</td></tr>
+<tr><td>5</td><td>Comanche</td><td>96</td><td>78</td><td>90</td></tr>
+<tr><td>6</td><td>Cherokee</td><td>82</td><td>91</td><td>92</td></tr>
+<tr><td>7</td><td>Seminole</td
