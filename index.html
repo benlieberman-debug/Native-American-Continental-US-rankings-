@@ -19,7 +19,7 @@
 
 body{
     font-family:'Montserrat',sans-serif;
-    background:#0c1016;
+    background:#0d1117;
     color:white;
     overflow-x:hidden;
 }
@@ -27,13 +27,13 @@ body{
 header{
     height:100vh;
     background:
-    linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.82)),
+    linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.8)),
     url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1600&auto=format&fit=crop');
     background-size:cover;
     background-position:center;
     display:flex;
-    align-items:center;
     justify-content:center;
+    align-items:center;
     text-align:center;
     padding:20px;
 }
@@ -51,20 +51,19 @@ header{
 }
 
 .hero p{
-    font-size:1.2rem;
-    line-height:1.9;
     color:#d0d0d0;
+    line-height:1.9;
+    font-size:1.2rem;
 }
 
 .hero button{
     margin-top:35px;
-    padding:16px 34px;
+    padding:16px 36px;
     border:none;
     border-radius:50px;
     background:#d4a62a;
     color:black;
     font-weight:800;
-    font-size:1rem;
     cursor:pointer;
     transition:.3s;
 }
@@ -88,147 +87,73 @@ section{
 .section-sub{
     text-align:center;
     color:#bcbcbc;
-    max-width:850px;
-    margin:0 auto 60px auto;
     line-height:1.8;
+    max-width:900px;
+    margin:0 auto 60px auto;
 }
 
-.map-container{
-    display:flex;
-    flex-wrap:wrap;
-    gap:40px;
-    align-items:center;
-    justify-content:center;
-}
-
-.map{
-    width:500px;
-    max-width:100%;
+.map-wrapper{
+    text-align:center;
     position:relative;
 }
 
-.map img{
-    width:100%;
-    border-radius:20px;
+.map-wrapper img{
+    width:900px;
+    max-width:100%;
+    border-radius:25px;
 }
 
-.pin{
+.dot{
     width:18px;
     height:18px;
-    background:#ffd45c;
+    background:#ffd34f;
+    border:3px solid white;
     border-radius:50%;
     position:absolute;
-    cursor:pointer;
-    border:3px solid white;
-    transition:.3s;
+    transform:translate(-50%,-50%);
+    box-shadow:0 0 12px rgba(255,211,79,.9);
 }
 
-.pin:hover{
-    transform:scale(1.4);
+.label{
+    position:absolute;
+    transform:translate(-50%,0);
+    color:white;
+    font-weight:700;
+    font-size:.9rem;
+    text-shadow:0 0 8px black;
 }
 
-.info-box{
-    flex:1;
-    min-width:300px;
-    background:#161b23;
-    padding:35px;
-    border-radius:25px;
-    box-shadow:0 10px 30px rgba(0,0,0,.4);
-}
-
-.info-box h2{
-    font-size:2rem;
-    margin-bottom:15px;
-}
-
-.info-box p{
-    line-height:1.9;
-    color:#d5d5d5;
-}
-
-.grid{
+.tribe-grid{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
     gap:35px;
 }
 
-.card{
+.tribe-card{
     background:#161b23;
     border-radius:25px;
-    overflow:hidden;
-    transition:.35s;
+    padding:30px;
+    transition:.3s;
 }
 
-.card:hover{
-    transform:translateY(-10px);
+.tribe-card:hover{
+    transform:translateY(-8px);
 }
 
-.card img{
-    width:100%;
-    height:240px;
-    object-fit:cover;
-}
-
-.content{
-    padding:25px;
-}
-
-.rank{
-    color:#f2c04b;
-    font-weight:800;
-    margin-bottom:10px;
-}
-
-.content h2{
-    margin-bottom:15px;
+.tribe-card h2{
+    color:#ffd34f;
+    margin-bottom:20px;
     font-size:2rem;
 }
 
-.content p{
-    color:#d4d4d4;
-    line-height:1.8;
-}
-
-.stats{
-    margin:20px 0;
-}
-
-.stat{
-    margin-bottom:12px;
-}
-
-.stat span{
-    display:flex;
-    justify-content:space-between;
-    margin-bottom:6px;
-}
-
-.bar{
-    height:10px;
-    background:#2c3340;
-    border-radius:30px;
-    overflow:hidden;
-}
-
-.fill{
-    height:100%;
-    background:linear-gradient(90deg,#d4a62a,#ffd45c);
-}
-
-.iroquois-section{
-    background:#121720;
-}
-
-.reason-box{
-    background:#1b212c;
-    padding:35px;
-    border-radius:25px;
+.tribe-card p{
+    color:#d3d3d3;
     line-height:1.9;
-    font-size:1.05rem;
+    margin-bottom:14px;
 }
 
-.table-section{
-    background:#131820;
+.blueprint{
+    background:#121720;
 }
 
 table{
@@ -248,6 +173,7 @@ th{
 
 td{
     padding:18px;
+    line-height:1.7;
 }
 
 tr:nth-child(even){
@@ -258,46 +184,33 @@ tr:nth-child(odd){
     background:#151922;
 }
 
-.lacrosse{
-    background:
-    linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.85)),
-    url('https://images.unsplash.com/photo-1517649763962-0c623066013b?q=80&w=1600&auto=format&fit=crop');
-    background-size:cover;
-    background-position:center;
+.rankings{
+    background:#10151d;
 }
 
-.lax-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:25px;
-}
-
-.lax-card{
-    background:rgba(18,21,30,.92);
+.rank-card{
+    background:#1a2029;
+    margin-bottom:25px;
+    border-radius:22px;
     padding:30px;
-    border-radius:20px;
-    transition:.3s;
+    border-left:8px solid #ffd34f;
 }
 
-.lax-card:hover{
-    transform:scale(1.04);
+.rank-card h2{
+    margin-bottom:12px;
+    color:#ffd34f;
 }
 
-.lax-rank{
-    font-size:3rem;
-    color:#ffd45c;
-    font-weight:900;
-}
-
-.lax-card h2{
-    margin:12px 0;
+.rank-card p{
+    color:#d4d4d4;
+    line-height:1.8;
 }
 
 footer{
     background:#080b10;
-    padding:40px;
     text-align:center;
-    color:#8d8d8d;
+    padding:40px;
+    color:#8f8f8f;
     line-height:1.8;
 }
 
@@ -326,11 +239,11 @@ footer{
 
 <p>
 Ranking major Native American tribes in the continental United States
-based on military strength, economic prosperity, territorial influence,
-leadership, resistance, and cultural impact.
+based on military strength, economic prosperity, political influence,
+territorial control, and historical legacy.
 </p>
 
-<button onclick="document.getElementById('map-section').scrollIntoView();">
+<button onclick="document.getElementById('map').scrollIntoView();">
 Explore Tribes
 </button>
 
@@ -338,271 +251,272 @@ Explore Tribes
 
 </header>
 
-<!-- INTERACTIVE MAP -->
+<!-- MAP -->
 
-<section id="map-section">
+<section id="map">
 
-<h1 class="section-title">Interactive Tribal Map</h1>
+<h1 class="section-title">Continental U.S. Tribal Locations</h1>
 
 <p class="section-sub">
-Tap different tribal regions on the map to learn about where they lived,
-their culture, military power, and historical influence.
+The map below shows the approximate regions occupied by major Native American tribes.
+Each glowing point represents the center of a tribe’s historic territory.
 </p>
 
-<div class="map-container">
+<div class="map-wrapper">
 
-<div class="map">
+<img src="YOUR_MAP_IMAGE.png">
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Map_of_Native_American_Tribes_in_the_USA.png">
+<!-- IROQUOIS -->
+<div class="dot" style="top:22%; left:73%;"></div>
+<div class="label" style="top:24%; left:73%;">Iroquois</div>
 
-<div class="pin" style="top:20%; left:73%;" onclick="showInfo('Iroquois Confederacy','The Iroquois occupied the Northeastern woodlands around modern-day New York. They created one of the strongest alliances in North America through diplomacy, military coordination, and political unity.')"></div>
+<!-- SIOUX -->
+<div class="dot" style="top:35%; left:54%;"></div>
+<div class="label" style="top:37%; left:54%;">Sioux</div>
 
-<div class="pin" style="top:32%; left:55%;" onclick="showInfo('Sioux','The Sioux controlled large parts of the Great Plains and became feared horse warriors known for military success and territorial dominance.')"></div>
+<!-- NAVAJO -->
+<div class="dot" style="top:57%; left:33%;"></div>
+<div class="label" style="top:59%; left:33%;">Navajo</div>
 
-<div class="pin" style="top:48%; left:34%;" onclick="showInfo('Navajo','The Navajo occupied the Southwest and built a powerful economy based on livestock, weaving, and trade.')"></div>
+<!-- CHEROKEE -->
+<div class="dot" style="top:58%; left:69%;"></div>
+<div class="label" style="top:60%; left:69%;">Cherokee</div>
 
-<div class="pin" style="top:58%; left:70%;" onclick="showInfo('Cherokee','The Cherokee lived in the Southeast and developed advanced farming systems, governance, and trade networks.')"></div>
+<!-- SEMINOLE -->
+<div class="dot" style="top:78%; left:79%;"></div>
+<div class="label" style="top:80%; left:79%;">Seminole</div>
 
-<div class="pin" style="top:68%; left:74%;" onclick="showInfo('Seminole','The Seminole resisted U.S. expansion in Florida and became known for guerrilla warfare tactics.')"></div>
+<!-- APACHE -->
+<div class="dot" style="top:52%; left:28%;"></div>
+<div class="label" style="top:54%; left:28%;">Apache</div>
 
-<div class="pin" style="top:50%; left:30%;" onclick="showInfo('Apache','The Apache dominated desert warfare and resisted colonizers through mobility and strategic raids.')"></div>
+<!-- COMANCHE -->
+<div class="dot" style="top:50%; left:43%;"></div>
+<div class="label" style="top:52%; left:43%;">Comanche</div>
 
-<div class="pin" style="top:44%; left:40%;" onclick="showInfo('Comanche','The Comanche ruled the Southern Plains through elite horseback warfare and massive trade influence.')"></div>
+<!-- CHIPPEWA -->
+<div class="dot" style="top:25%; left:57%;"></div>
+<div class="label" style="top:27%; left:57%;">Chippewa</div>
 
-<div class="pin" style="top:24%; left:50%;" onclick="showInfo('Chippewa','The Chippewa lived near the Great Lakes and thrived through trade, fishing, and woodland survival.')"></div>
-
-<div class="pin" style="top:60%; left:66%;" onclick="showInfo('Choctaw','The Choctaw lived in the Southeast and became known for farming, diplomacy, and economic strength.')"></div>
-
-</div>
-
-<div class="info-box">
-
-<h2 id="tribe-title">Click a Tribal Region</h2>
-
-<p id="tribe-info">
-Select one of the glowing points on the map to learn about each tribe.
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- WHY IROQUOIS WERE STRONGEST -->
-
-<section class="iroquois-section">
-
-<h1 class="section-title">Why Were the Iroquois the Strongest?</h1>
-
-<div class="reason-box">
-
-<p>
-The Iroquois Confederacy is often considered the strongest Native American
-alliance in the continental United States because of their unique combination
-of military power, diplomacy, and political organization.
-</p>
-
-<br>
-
-<p>
-Unlike many tribes that operated independently, the Iroquois united multiple
-nations together under one confederacy called the Haudenosaunee. This allowed
-them to combine armies, share resources, coordinate strategies, and create
-lasting alliances.
-</p>
-
-<br>
-
-<p>
-Their warriors were highly skilled, but their real strength came from their
-government system and diplomacy. European powers such as the British and French
-often competed for Iroquois support because of how influential they were.
-</p>
-
-<br>
-
-<p>
-The Iroquois also controlled important trade routes in the Northeast,
-giving them major economic advantages and political influence for centuries.
-</p>
+<!-- CHOCTAW -->
+<div class="dot" style="top:63%; left:63%;"></div>
+<div class="label" style="top:65%; left:63%;">Choctaw</div>
 
 </div>
 
 </section>
 
-<!-- RANKINGS -->
+<!-- TRIBE SUMMARIES -->
 
 <section>
 
-<h1 class="section-title">Overall Rankings</h1>
+<h1 class="section-title">Five-Sentence Tribe Summaries</h1>
 
-<p class="section-sub">
-These rankings combine military strength, economic prosperity,
-territorial control, influence, and resistance.
-</p>
+<div class="tribe-grid">
 
-<div class="grid">
-
-<div class="card">
-
-<img src="https://images.unsplash.com/photo-1511497584788-876760111969?q=80&w=1200&auto=format&fit=crop">
-
-<div class="content">
-
-<div class="rank">#1 Overall</div>
-
+<div class="tribe-card">
 <h2>Iroquois Confederacy</h2>
-
-<div class="stats">
-
-<div class="stat">
-<span><strong>Military</strong><strong>98</strong></span>
-<div class="bar"><div class="fill" style="width:98%"></div></div>
+<p>The Iroquois lived in the Northeastern woodlands around present-day New York. They formed a confederacy that united multiple nations together under one alliance. Their government system was highly advanced and influenced democratic ideas later used in America. The Iroquois became powerful through diplomacy, trade, and military organization. Many historians consider them the strongest Native alliance in North America.</p>
 </div>
 
-<div class="stat">
-<span><strong>Economy</strong><strong>95</strong></span>
-<div class="bar"><div class="fill" style="width:95%"></div></div>
+<div class="tribe-card">
+<h2>Sioux</h2>
+<p>The Sioux controlled large parts of the Great Plains region. They became famous horse warriors after adopting mounted combat. Sioux tribes defeated several U.S. military forces in battle. Their culture centered around buffalo hunting and warrior traditions. The Sioux became one of the most feared military groups in the West.</p>
 </div>
 
-<div class="stat">
-<span><strong>Influence</strong><strong>100</strong></span>
-<div class="bar"><div class="fill" style="width:100%"></div></div>
+<div class="tribe-card">
+<h2>Navajo</h2>
+<p>The Navajo lived throughout the American Southwest. They built a strong economy based on livestock, weaving, and trade. Navajo communities became known for resilience and survival in harsh desert regions. Their population remains one of the largest Native American groups today. Navajo culture continues to have major influence across the Southwest.</p>
 </div>
 
+<div class="tribe-card">
+<h2>Cherokee</h2>
+<p>The Cherokee occupied areas throughout the Southeastern United States. They created advanced farming systems and successful trade networks. The Cherokee also developed a written language created by Sequoyah. Many Cherokee adapted aspects of European government and education systems. Despite forced removal during the Trail of Tears, Cherokee culture survived and remained influential.</p>
 </div>
 
-<p>
-The Iroquois Confederacy became one of the most powerful alliances in
-North America because of political unity, trade influence, and military skill.
-</p>
-
+<div class="tribe-card">
+<h2>Seminole</h2>
+<p>The Seminole primarily lived in Florida and surrounding regions. They became known for resisting U.S. expansion during the Seminole Wars. Seminole fighters used swamp terrain and guerrilla warfare to their advantage. Their resistance lasted longer than many other tribes against American forces. Seminole culture remains strong today in Florida and Oklahoma.</p>
 </div>
 
+<div class="tribe-card">
+<h2>Apache</h2>
+<p>The Apache lived throughout the deserts and mountains of the Southwest. They became experts in guerrilla warfare and survival tactics. Apache warriors used mobility and surprise attacks effectively against enemies. Leaders such as Geronimo became legendary for resistance against U.S. and Mexican armies. The Apache earned a reputation as one of the toughest warrior cultures in North America.</p>
 </div>
 
-<div class="card">
+<div class="tribe-card">
+<h2>Comanche</h2>
+<p>The Comanche dominated the Southern Plains through horseback warfare. They controlled major trade and raiding routes across Texas and nearby territories. Comanche riders were considered some of the best horsemen in the world. Their military power created what historians call the “Comanche Empire.” The tribe became one of the most influential groups in Plains history.</p>
+</div>
 
-<img src="ChoctawTribe.png">
+<div class="tribe-card">
+<h2>Chippewa</h2>
+<p>The Chippewa, also known as the Ojibwe, lived near the Great Lakes region. They relied on fishing, hunting, and trade for survival. The tribe became important in the fur trade economy. Their communities were highly adaptable to woodland environments. Chippewa traditions and language continue to survive today.</p>
+</div>
 
-<div class="content">
-
-<div class="rank">Choctaw Tribe</div>
-
+<div class="tribe-card">
 <h2>Choctaw</h2>
-
-<div class="stats">
-
-<div class="stat">
-<span><strong>Economy</strong><strong>83</strong></span>
-<div class="bar"><div class="fill" style="width:83%"></div></div>
-</div>
-
-<div class="stat">
-<span><strong>Military</strong><strong>76</strong></span>
-<div class="bar"><div class="fill" style="width:76%"></div></div>
-</div>
-
-<div class="stat">
-<span><strong>Influence</strong><strong>79</strong></span>
-<div class="bar"><div class="fill" style="width:79%"></div></div>
-</div>
-
-</div>
-
-<p>
-The Choctaw became known for strong agriculture, diplomacy,
-and economic success throughout the Southeast.
-</p>
-
-</div>
-
+<p>The Choctaw lived in the Southeastern United States. They developed successful farming systems and trade relationships. Choctaw diplomacy helped them maintain strong alliances at different points in history. The tribe became known for generosity and strong community values. Today the Choctaw Nation remains one of the largest Native American tribes in America.</p>
 </div>
 
 </div>
 
 </section>
 
-<!-- TABLE -->
+<!-- BLUEPRINT -->
 
-<section class="table-section">
+<section class="blueprint">
 
-<h1 class="section-title">Full Tribe Comparison</h1>
+<h1 class="section-title">Tribal Blueprint Comparison</h1>
+
+<p class="section-sub">
+Comparing the major strengths and weaknesses of each tribe based on military,
+economics, geography, political unity, and historical influence.
+</p>
 
 <table>
 
 <tr>
-<th>Rank</th>
 <th>Tribe</th>
-<th>Military</th>
-<th>Economy</th>
-<th>Influence</th>
+<th>Pros</th>
+<th>Cons</th>
 </tr>
 
-<tr><td>1</td><td>Iroquois</td><td>98</td><td>95</td><td>100</td></tr>
-<tr><td>2</td><td>Sioux</td><td>97</td><td>80</td><td>95</td></tr>
-<tr><td>3</td><td>Navajo</td><td>88</td><td>96</td><td>97</td></tr>
-<tr><td>4</td><td>Apache</td><td>95</td><td>70</td><td>89</td></tr>
-<tr><td>5</td><td>Comanche</td><td>96</td><td>78</td><td>90</td></tr>
-<tr><td>6</td><td>Cherokee</td><td>82</td><td>91</td><td>92</td></tr>
-<tr><td>7</td><td>Seminole</td><td>85</td><td>72</td><td>84</td></tr>
-<tr><td>8</td><td>Chippewa</td><td>80</td><td>75</td><td>81</td></tr>
-<tr><td>9</td><td>Choctaw</td><td>76</td><td>83</td><td>79</td></tr>
+<tr>
+<td>Iroquois</td>
+<td>Strong confederacy, elite diplomacy, military alliances, trade power</td>
+<td>Internal conflicts occasionally weakened unity</td>
+</tr>
+
+<tr>
+<td>Sioux</td>
+<td>Elite horse warfare, large territory, powerful warrior culture</td>
+<td>Less centralized political organization</td>
+</tr>
+
+<tr>
+<td>Navajo</td>
+<td>Strong economy, large population, cultural survival</td>
+<td>Less aggressive military expansion</td>
+</tr>
+
+<tr>
+<td>Cherokee</td>
+<td>Advanced government, farming, written language</td>
+<td>Vulnerable to forced relocation</td>
+</tr>
+
+<tr>
+<td>Seminole</td>
+<td>Excellent guerrilla warfare, swamp defense tactics</td>
+<td>Smaller population and territory</td>
+</tr>
+
+<tr>
+<td>Apache</td>
+<td>Expert survival skills, guerrilla warfare, mobility</td>
+<td>Limited centralized economy</td>
+</tr>
+
+<tr>
+<td>Comanche</td>
+<td>Best horse warriors, territorial dominance, trade influence</td>
+<td>Dependent on Plains resources and buffalo</td>
+</tr>
+
+<tr>
+<td>Chippewa</td>
+<td>Great Lakes trade, woodland survival, adaptability</td>
+<td>Less military dominance compared to Plains tribes</td>
+</tr>
+
+<tr>
+<td>Choctaw</td>
+<td>Strong farming economy, diplomacy, community stability</td>
+<td>Less military expansion and conquest</td>
+</tr>
 
 </table>
 
 </section>
 
-<!-- LACROSSE -->
+<!-- FINAL RANKINGS -->
 
-<section class="lacrosse">
+<section class="rankings">
 
-<h1 class="section-title">Lacrosse Rankings</h1>
+<h1 class="section-title">Final Rankings</h1>
 
-<p class="section-sub">
-Lacrosse originated from Indigenous cultures and became especially important
-among Northeastern tribes.
-</p>
-
-<div class="lax-grid">
-
-<div class="lax-card">
-<div class="lax-rank">1</div>
-<h2>Iroquois</h2>
+<div class="rank-card">
+<h2>#1 — Iroquois Confederacy</h2>
 <p>
-The Iroquois are considered the greatest lacrosse culture because they helped
-create the game and still compete internationally through the Haudenosaunee Nationals.
+The Iroquois ranked first because of their unmatched political unity,
+economic trade power, diplomacy, and military organization.
+Their confederacy allowed multiple nations to act together as one.
 </p>
 </div>
 
-<div class="lax-card">
-<div class="lax-rank">2</div>
-<h2>Mohawk</h2>
+<div class="rank-card">
+<h2>#2 — Sioux</h2>
 <p>
-The Mohawk nation has deep traditions connected to lacrosse and remains one
-of the strongest Native influences in the sport today.
+The Sioux became one of the most dominant military forces in North America,
+especially after mastering horseback warfare on the Great Plains.
 </p>
 </div>
 
-<div class="lax-card">
-<div class="lax-rank">3</div>
-<h2>Onondaga</h2>
+<div class="rank-card">
+<h2>#3 — Comanche</h2>
 <p>
-Onondaga communities preserved many ceremonial and spiritual traditions
-connected to lacrosse.
+The Comanche controlled major Plains territories and developed one of the
+strongest horse-based warrior societies in history.
 </p>
 </div>
 
-<div class="lax-card">
-<div class="lax-rank">4</div>
-<h2>Cherokee</h2>
+<div class="rank-card">
+<h2>#4 — Navajo</h2>
 <p>
-The Cherokee played stickball, a traditional game closely related to lacrosse,
-which became an important cultural sport.
+The Navajo combined economic prosperity, cultural survival,
+and population strength to become one of the most successful tribes.
 </p>
 </div>
 
+<div class="rank-card">
+<h2>#5 — Apache</h2>
+<p>
+The Apache became legendary for guerrilla warfare and resistance tactics
+throughout the Southwest.
+</p>
+</div>
+
+<div class="rank-card">
+<h2>#6 — Cherokee</h2>
+<p>
+The Cherokee stood out because of advanced farming,
+government systems, and cultural innovation.
+</p>
+</div>
+
+<div class="rank-card">
+<h2>#7 — Seminole</h2>
+<p>
+The Seminole gained recognition for fierce resistance against U.S. forces
+during the Seminole Wars.
+</p>
+</div>
+
+<div class="rank-card">
+<h2>#8 — Chippewa</h2>
+<p>
+The Chippewa thrived through trade, adaptability,
+and survival in the Great Lakes region.
+</p>
+</div>
+
+<div class="rank-card">
+<h2>#9 — Choctaw</h2>
+<p>
+The Choctaw excelled in agriculture, diplomacy,
+and long-term community stability.
+</p>
 </div>
 
 </section>
@@ -610,7 +524,7 @@ which became an important cultural sport.
 <footer>
 
 <p>
-Native American Tribe Ranking Project
+Native American Tribe Historical Ranking Project
 </p>
 
 <p>
@@ -618,17 +532,6 @@ Built with HTML, CSS, and JavaScript
 </p>
 
 </footer>
-
-<script>
-
-function showInfo(title, text){
-
-document.getElementById("tribe-title").innerHTML = title;
-document.getElementById("tribe-info").innerHTML = text;
-
-}
-
-</script>
 
 </body>
 </html>
