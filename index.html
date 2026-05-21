@@ -19,23 +19,21 @@
 
 body{
     font-family:'Montserrat',sans-serif;
-    background:#0d1015;
+    background:#0c1016;
     color:white;
     overflow-x:hidden;
 }
 
-/* HERO */
-
 header{
     height:100vh;
     background:
-    linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.8)),
-    url("https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1600&auto=format&fit=crop");
+    linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.82)),
+    url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1600&auto=format&fit=crop');
     background-size:cover;
     background-position:center;
     display:flex;
-    justify-content:center;
     align-items:center;
+    justify-content:center;
     text-align:center;
     padding:20px;
 }
@@ -49,34 +47,35 @@ header{
     font-weight:900;
     margin-bottom:25px;
     text-transform:uppercase;
+    letter-spacing:3px;
 }
 
 .hero p{
-    color:#d0d0d0;
-    line-height:1.8;
     font-size:1.2rem;
+    line-height:1.9;
+    color:#d0d0d0;
 }
 
 .hero button{
     margin-top:35px;
-    padding:16px 36px;
+    padding:16px 34px;
     border:none;
     border-radius:50px;
-    background:#d4a017;
+    background:#d4a62a;
     color:black;
     font-weight:800;
+    font-size:1rem;
     cursor:pointer;
     transition:.3s;
 }
 
 .hero button:hover{
     transform:scale(1.05);
+    background:#f2c04b;
 }
 
-/* GENERAL */
-
 section{
-    padding:90px 8%;
+    padding:90px 9%;
 }
 
 .section-title{
@@ -89,67 +88,63 @@ section{
 .section-sub{
     text-align:center;
     color:#bcbcbc;
-    line-height:1.8;
     max-width:850px;
     margin:0 auto 60px auto;
+    line-height:1.8;
 }
-
-/* INTERACTIVE MAP */
 
 .map-container{
     display:flex;
-    gap:40px;
     flex-wrap:wrap;
+    gap:40px;
     align-items:center;
     justify-content:center;
 }
 
 .map{
-    position:relative;
-    width:700px;
+    width:500px;
     max-width:100%;
+    position:relative;
 }
 
 .map img{
     width:100%;
-    border-radius:25px;
+    border-radius:20px;
 }
 
-.region{
-    position:absolute;
-    width:24px;
-    height:24px;
+.pin{
+    width:18px;
+    height:18px;
+    background:#ffd45c;
     border-radius:50%;
-    background:#ffd54a;
-    border:3px solid white;
+    position:absolute;
     cursor:pointer;
+    border:3px solid white;
     transition:.3s;
 }
 
-.region:hover{
-    transform:scale(1.2);
+.pin:hover{
+    transform:scale(1.4);
 }
 
 .info-box{
-    background:#171b22;
-    padding:30px;
+    flex:1;
+    min-width:300px;
+    background:#161b23;
+    padding:35px;
     border-radius:25px;
-    width:400px;
-    min-height:320px;
-    box-shadow:0 10px 25px rgba(0,0,0,.4);
+    box-shadow:0 10px 30px rgba(0,0,0,.4);
 }
 
 .info-box h2{
-    margin-bottom:18px;
-    color:#ffd54a;
+    font-size:2rem;
+    margin-bottom:15px;
 }
 
 .info-box p{
-    line-height:1.8;
-    color:#d3d3d3;
+    line-height:1.9;
+    color:#d5d5d5;
 }
-
-/* RANKINGS */
 
 .grid{
     display:grid;
@@ -179,35 +174,73 @@ section{
 }
 
 .rank{
-    color:#ffd54a;
+    color:#f2c04b;
     font-weight:800;
     margin-bottom:10px;
 }
 
 .content h2{
-    margin-bottom:18px;
+    margin-bottom:15px;
     font-size:2rem;
 }
 
 .content p{
-    color:#d2d2d2;
+    color:#d4d4d4;
     line-height:1.8;
 }
 
-/* TABLE */
+.stats{
+    margin:20px 0;
+}
+
+.stat{
+    margin-bottom:12px;
+}
+
+.stat span{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:6px;
+}
+
+.bar{
+    height:10px;
+    background:#2c3340;
+    border-radius:30px;
+    overflow:hidden;
+}
+
+.fill{
+    height:100%;
+    background:linear-gradient(90deg,#d4a62a,#ffd45c);
+}
+
+.iroquois-section{
+    background:#121720;
+}
+
+.reason-box{
+    background:#1b212c;
+    padding:35px;
+    border-radius:25px;
+    line-height:1.9;
+    font-size:1.05rem;
+}
 
 .table-section{
-    background:#13171f;
+    background:#131820;
 }
 
 table{
     width:100%;
     border-collapse:collapse;
     margin-top:40px;
+    border-radius:20px;
+    overflow:hidden;
 }
 
 th{
-    background:#d4a017;
+    background:#d4a62a;
     color:black;
     padding:18px;
     text-align:left;
@@ -218,37 +251,19 @@ td{
 }
 
 tr:nth-child(even){
-    background:#1b2029;
+    background:#1a2029;
 }
 
 tr:nth-child(odd){
     background:#151922;
 }
 
-/* IROQUOIS */
-
-.iroquois{
+.lacrosse{
     background:
-    linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.8)),
-    url("https://images.unsplash.com/photo-1511497584788-876760111969?q=80&w=1600&auto=format&fit=crop");
+    linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.85)),
+    url('https://images.unsplash.com/photo-1517649763962-0c623066013b?q=80&w=1600&auto=format&fit=crop');
     background-size:cover;
     background-position:center;
-}
-
-.iroquois-box{
-    max-width:1000px;
-    margin:auto;
-    background:rgba(18,22,29,.88);
-    padding:45px;
-    border-radius:30px;
-    line-height:2;
-    font-size:1.05rem;
-}
-
-/* LACROSSE */
-
-.lacrosse{
-    background:#10151c;
 }
 
 .lax-grid{
@@ -258,42 +273,42 @@ tr:nth-child(odd){
 }
 
 .lax-card{
-    background:#171d26;
+    background:rgba(18,21,30,.92);
     padding:30px;
     border-radius:20px;
-    text-align:center;
+    transition:.3s;
+}
+
+.lax-card:hover{
+    transform:scale(1.04);
 }
 
 .lax-rank{
     font-size:3rem;
-    color:#ffd54a;
+    color:#ffd45c;
     font-weight:900;
 }
 
 .lax-card h2{
-    margin:15px 0;
+    margin:12px 0;
 }
 
-/* FOOTER */
-
 footer{
-    background:#090c11;
+    background:#080b10;
     padding:40px;
     text-align:center;
     color:#8d8d8d;
     line-height:1.8;
 }
 
-/* MOBILE */
-
 @media(max-width:768px){
 
 .hero h1{
-    font-size:2.7rem;
+    font-size:2.8rem;
 }
 
 .section-title{
-    font-size:2rem;
+    font-size:2.2rem;
 }
 
 }
@@ -310,9 +325,9 @@ footer{
 <h1>Native American Tribe Rankings</h1>
 
 <p>
-Explore the strongest Native American tribes in the continental United States
-through military strength, economic prosperity, territorial influence,
-and cultural impact.
+Ranking major Native American tribes in the continental United States
+based on military strength, economic prosperity, territorial influence,
+leadership, resistance, and cultural impact.
 </p>
 
 <button onclick="document.getElementById('map-section').scrollIntoView();">
@@ -323,62 +338,94 @@ Explore Tribes
 
 </header>
 
-<!-- MAP SECTION -->
+<!-- INTERACTIVE MAP -->
 
 <section id="map-section">
 
 <h1 class="section-title">Interactive Tribal Map</h1>
 
 <p class="section-sub">
-Tap the glowing regions on the map to learn about each tribe,
-where they lived, and what made them powerful.
+Tap different tribal regions on the map to learn about where they lived,
+their culture, military power, and historical influence.
 </p>
 
 <div class="map-container">
 
 <div class="map">
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Blank_US_Map_%28states_only%29.svg/1280px-Blank_US_Map_%28states_only%29.svg.png">
+<img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Map_of_Native_American_Tribes_in_the_USA.png">
 
-<!-- IROQUOIS -->
-<div class="region" style="top:27%; left:77%;" onclick="showInfo('iroquois')"></div>
+<div class="pin" style="top:20%; left:73%;" onclick="showInfo('Iroquois Confederacy','The Iroquois occupied the Northeastern woodlands around modern-day New York. They created one of the strongest alliances in North America through diplomacy, military coordination, and political unity.')"></div>
 
-<!-- SIOUX -->
-<div class="region" style="top:33%; left:55%;" onclick="showInfo('sioux')"></div>
+<div class="pin" style="top:32%; left:55%;" onclick="showInfo('Sioux','The Sioux controlled large parts of the Great Plains and became feared horse warriors known for military success and territorial dominance.')"></div>
 
-<!-- NAVAJO -->
-<div class="region" style="top:58%; left:33%;" onclick="showInfo('navajo')"></div>
+<div class="pin" style="top:48%; left:34%;" onclick="showInfo('Navajo','The Navajo occupied the Southwest and built a powerful economy based on livestock, weaving, and trade.')"></div>
 
-<!-- APACHE -->
-<div class="region" style="top:67%; left:35%;" onclick="showInfo('apache')"></div>
+<div class="pin" style="top:58%; left:70%;" onclick="showInfo('Cherokee','The Cherokee lived in the Southeast and developed advanced farming systems, governance, and trade networks.')"></div>
 
-<!-- COMANCHE -->
-<div class="region" style="top:62%; left:47%;" onclick="showInfo('comanche')"></div>
+<div class="pin" style="top:68%; left:74%;" onclick="showInfo('Seminole','The Seminole resisted U.S. expansion in Florida and became known for guerrilla warfare tactics.')"></div>
 
-<!-- CHEROKEE -->
-<div class="region" style="top:58%; left:67%;" onclick="showInfo('cherokee')"></div>
+<div class="pin" style="top:50%; left:30%;" onclick="showInfo('Apache','The Apache dominated desert warfare and resisted colonizers through mobility and strategic raids.')"></div>
 
-<!-- SEMINOLE -->
-<div class="region" style="top:80%; left:78%;" onclick="showInfo('seminole')"></div>
+<div class="pin" style="top:44%; left:40%;" onclick="showInfo('Comanche','The Comanche ruled the Southern Plains through elite horseback warfare and massive trade influence.')"></div>
 
-<!-- CHIPPEWA -->
-<div class="region" style="top:22%; left:60%;" onclick="showInfo('chippewa')"></div>
+<div class="pin" style="top:24%; left:50%;" onclick="showInfo('Chippewa','The Chippewa lived near the Great Lakes and thrived through trade, fishing, and woodland survival.')"></div>
 
-<!-- CHOCTAW -->
-<div class="region" style="top:67%; left:63%;" onclick="showInfo('choctaw')"></div>
+<div class="pin" style="top:60%; left:66%;" onclick="showInfo('Choctaw','The Choctaw lived in the Southeast and became known for farming, diplomacy, and economic strength.')"></div>
 
 </div>
 
-<div class="info-box" id="infoBox">
+<div class="info-box">
 
-<h2>Click A Tribe Region</h2>
+<h2 id="tribe-title">Click a Tribal Region</h2>
 
-<p>
-Select a glowing location on the map to learn about the tribe,
-their homeland, military power, economy, and influence.
+<p id="tribe-info">
+Select one of the glowing points on the map to learn about each tribe.
 </p>
 
 </div>
+
+</div>
+
+</section>
+
+<!-- WHY IROQUOIS WERE STRONGEST -->
+
+<section class="iroquois-section">
+
+<h1 class="section-title">Why Were the Iroquois the Strongest?</h1>
+
+<div class="reason-box">
+
+<p>
+The Iroquois Confederacy is often considered the strongest Native American
+alliance in the continental United States because of their unique combination
+of military power, diplomacy, and political organization.
+</p>
+
+<br>
+
+<p>
+Unlike many tribes that operated independently, the Iroquois united multiple
+nations together under one confederacy called the Haudenosaunee. This allowed
+them to combine armies, share resources, coordinate strategies, and create
+lasting alliances.
+</p>
+
+<br>
+
+<p>
+Their warriors were highly skilled, but their real strength came from their
+government system and diplomacy. European powers such as the British and French
+often competed for Iroquois support because of how influential they were.
+</p>
+
+<br>
+
+<p>
+The Iroquois also controlled important trade routes in the Northeast,
+giving them major economic advantages and political influence for centuries.
+</p>
 
 </div>
 
@@ -388,49 +435,89 @@ their homeland, military power, economy, and influence.
 
 <section>
 
-<h1 class="section-title">Historical Rankings</h1>
+<h1 class="section-title">Overall Rankings</h1>
 
 <p class="section-sub">
-These rankings combine military skill, trade systems,
-economic prosperity, alliances, population, and historical influence.
+These rankings combine military strength, economic prosperity,
+territorial control, influence, and resistance.
 </p>
 
 <div class="grid">
 
 <div class="card">
+
 <img src="https://images.unsplash.com/photo-1511497584788-876760111969?q=80&w=1200&auto=format&fit=crop">
+
 <div class="content">
+
 <div class="rank">#1 Overall</div>
+
 <h2>Iroquois Confederacy</h2>
-<p>
-The Iroquois Confederacy formed one of the strongest alliances in North America,
-combining military coordination, trade, diplomacy, and political unity.
-</p>
+
+<div class="stats">
+
+<div class="stat">
+<span><strong>Military</strong><strong>98</strong></span>
+<div class="bar"><div class="fill" style="width:98%"></div></div>
 </div>
+
+<div class="stat">
+<span><strong>Economy</strong><strong>95</strong></span>
+<div class="bar"><div class="fill" style="width:95%"></div></div>
+</div>
+
+<div class="stat">
+<span><strong>Influence</strong><strong>100</strong></span>
+<div class="bar"><div class="fill" style="width:100%"></div></div>
+</div>
+
+</div>
+
+<p>
+The Iroquois Confederacy became one of the most powerful alliances in
+North America because of political unity, trade influence, and military skill.
+</p>
+
+</div>
+
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1200&auto=format&fit=crop">
+
+<img src="ChoctawTribe.png">
+
 <div class="content">
-<div class="rank">#2</div>
-<h2>Sioux</h2>
-<p>
-The Sioux dominated the Great Plains with elite horseback warriors,
-large territory, and powerful resistance against U.S. forces.
-</p>
-</div>
+
+<div class="rank">Choctaw Tribe</div>
+
+<h2>Choctaw</h2>
+
+<div class="stats">
+
+<div class="stat">
+<span><strong>Economy</strong><strong>83</strong></span>
+<div class="bar"><div class="fill" style="width:83%"></div></div>
 </div>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1472396961693-142e6e269027?q=80&w=1200&auto=format&fit=crop">
-<div class="content">
-<div class="rank">#3</div>
-<h2>Navajo</h2>
-<p>
-The Navajo became one of the most economically prosperous Native groups
-through livestock, trade, and weaving industries.
-</p>
+<div class="stat">
+<span><strong>Military</strong><strong>76</strong></span>
+<div class="bar"><div class="fill" style="width:76%"></div></div>
 </div>
+
+<div class="stat">
+<span><strong>Influence</strong><strong>79</strong></span>
+<div class="bar"><div class="fill" style="width:79%"></div></div>
+</div>
+
+</div>
+
+<p>
+The Choctaw became known for strong agriculture, diplomacy,
+and economic success throughout the Southeast.
+</p>
+
+</div>
+
 </div>
 
 </div>
@@ -441,7 +528,7 @@ through livestock, trade, and weaving industries.
 
 <section class="table-section">
 
-<h1 class="section-title">Complete Rankings</h1>
+<h1 class="section-title">Full Tribe Comparison</h1>
 
 <table>
 
@@ -459,4 +546,89 @@ through livestock, trade, and weaving industries.
 <tr><td>4</td><td>Apache</td><td>95</td><td>70</td><td>89</td></tr>
 <tr><td>5</td><td>Comanche</td><td>96</td><td>78</td><td>90</td></tr>
 <tr><td>6</td><td>Cherokee</td><td>82</td><td>91</td><td>92</td></tr>
-<tr><td>7</td><td>Seminole</td
+<tr><td>7</td><td>Seminole</td><td>85</td><td>72</td><td>84</td></tr>
+<tr><td>8</td><td>Chippewa</td><td>80</td><td>75</td><td>81</td></tr>
+<tr><td>9</td><td>Choctaw</td><td>76</td><td>83</td><td>79</td></tr>
+
+</table>
+
+</section>
+
+<!-- LACROSSE -->
+
+<section class="lacrosse">
+
+<h1 class="section-title">Lacrosse Rankings</h1>
+
+<p class="section-sub">
+Lacrosse originated from Indigenous cultures and became especially important
+among Northeastern tribes.
+</p>
+
+<div class="lax-grid">
+
+<div class="lax-card">
+<div class="lax-rank">1</div>
+<h2>Iroquois</h2>
+<p>
+The Iroquois are considered the greatest lacrosse culture because they helped
+create the game and still compete internationally through the Haudenosaunee Nationals.
+</p>
+</div>
+
+<div class="lax-card">
+<div class="lax-rank">2</div>
+<h2>Mohawk</h2>
+<p>
+The Mohawk nation has deep traditions connected to lacrosse and remains one
+of the strongest Native influences in the sport today.
+</p>
+</div>
+
+<div class="lax-card">
+<div class="lax-rank">3</div>
+<h2>Onondaga</h2>
+<p>
+Onondaga communities preserved many ceremonial and spiritual traditions
+connected to lacrosse.
+</p>
+</div>
+
+<div class="lax-card">
+<div class="lax-rank">4</div>
+<h2>Cherokee</h2>
+<p>
+The Cherokee played stickball, a traditional game closely related to lacrosse,
+which became an important cultural sport.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>
+Native American Tribe Ranking Project
+</p>
+
+<p>
+Built with HTML, CSS, and JavaScript
+</p>
+
+</footer>
+
+<script>
+
+function showInfo(title, text){
+
+document.getElementById("tribe-title").innerHTML = title;
+document.getElementById("tribe-info").innerHTML = text;
+
+}
+
+</script>
+
+</body>
+</html>
